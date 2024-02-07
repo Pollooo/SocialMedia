@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Social Media Profiles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222224; /* Black background */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        .social-links {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center align the social links */
+            position: relative; /* Position relative to contain the animated border */
+        }
+        .social-links h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .social-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .social-links li {
+            margin-bottom: 20px;
+        }
+        .social-links a {
+            display: inline-block;
+            padding: 15px 35px;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 15px;
+            transition: all 0.5s ease;
+            margin-left: 10px; /* Add margin to the left to position the links to the right */
+            position: relative;
+            z-index: 2; /* Ensure icons are above the border */
+            animation: rotateIcon 1s infinite alternate; /* Add animation */
+        }
+        .social-links a:hover {
+            opacity: 0.9;
+        }
+        .facebook {
+            background-color: #3b5998; /* Facebook blue */
+        }
+        .twitter {
+            background-color: #1da1f2; /* Twitter blue */
+        }
+        .instagram {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #FCAF45, #FFDC80); /* Instagram colorful gradient */
+        }
+        .linkedin {
+            background-color: #0077b5; /* LinkedIn blue */
+        }
+        .youtube {
+            background-color: #ff0000; /* YouTube red */
+        }
+        .telegram {
+            background-color: #0088cc; /* Telegram blue */
+        }
+        .whatsapp {
+            background-color: #25D366; /* WhatsApp green */
+        }
+        .tiktok {
+            background-color: #000; /* TikTok black */
+        }
+        .snapchat {
+            background-color: #d3cf06; /* Snapchat yellow */
+            color: #dd0f0f; /* Set text color to black for better contrast */
+        }
+        .social-links .fa {
+            margin-right: 10px;
+            font-size: 24px; /* Adjust the size of the icons */
+        }
+
+        /* CSS animation for rotating the icons */
+        @keyframes rotateIcon {
+            from {
+                transform: rotate(-5deg);
+            }
+            to {
+                transform: rotate(5deg);
+            }
+        }
+
+        /* CSS animation for glowing border */
+        .social-links::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 16px;
+            z-index: 1; /* Ensure it's behind the content */
+            animation: glowingBorder 2s infinite alternate; /* Add animation */
+        }
+
+        @keyframes glowingBorder {
+            0% {
+                border: 6px solid #00ff00; /* Start with red border */
+                box-shadow: 0 0 20px #00ff00; /* Red glow */
+            }
+            50% {
+                border: 6px solid #00ff00; /* Change to green border */
+                box-shadow: 0 0 20px #00ff00; /* Green glow */
+            }
+            100% {
+                border: 6px solid #0000ff; /* Change to blue border */
+                box-shadow: 0 0 50px #0000ff; /* Blue glow */
+            }
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 600px) {
+            .social-links a {
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="social-links">
+    <h2>My Social Media Profiles</h2>
+    <ul>
+        <li><a href="https://www.facebook.com/yourusername" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i> Your Name</a></li>
+        <li><a href="https://twitter.com/yourusername" class="twitter" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+        <li><a href="https://www.instagram.com/yourusername" class="instagram" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/yourusername" class="linkedin" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+        <li><a href="https://www.youtube.com/user/yourusername" class="youtube" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+        <li><a href="https://t.me/yourusername" class="telegram" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a></li>
+        <li><a href="https://wa.me/yourphonenumber" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+        <li><a href="https://www.tiktok.com/@yourusername" class="tiktok" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></li>
+        <li><a href="https://www.snapchat.com/add/yourusername" class="snapchat" target="_blank"><i class="fab fa-snapchat-ghost"></i> Snapchat</a></li>
+        <!-- Add more social media links as needed -->
+    </ul>
+</div>
+
+</body>
+</html>
